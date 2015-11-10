@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <style>
+            body, html { padding: 0; margin: 0; }
+            game { width: 100vw; height: 100vh; display: block; overflow: hidden; }
+            platform { width: inherit; height: inherit; }
+            background { position: relative; width: inherit; height: inherit; }
+            background .background { position: absolute; top: 0; background-size: cover; width: 100vw; height: 100vh; } 
+            background .background:nth-child(1) { left: 0; }
+            background .background:nth-child(2) { left: 100vw; }   
+            background .background:nth-child(3) { left: 200vw; }   
+            score { font-size: 3rem; color: #FFF; position: fixed; top: 2rem; right: 10rem; }
+            platform { width: 100vw; height: 100vh; position: fixed; left: 0; top: 0; }
+            platform .ship { position: fixed; width: 8rem; height:4rem; background-size: cover; background-repeat: no-repeat;  top: 0; left: 10%; }
+            .projectile { background-size: cover;  background-repeat: no-repeat;  position: fixed; }
+        </style>
+        <game>
+            <background></background>
+            <platform></platform>
+            <score>0</score>
+        </game>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>
