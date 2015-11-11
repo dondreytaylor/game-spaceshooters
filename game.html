@@ -14,12 +14,15 @@
             score { font-size: 3rem; color: #FFF; position: fixed; top: 2rem; right: 10rem; }
             platform { width: 100vw; height: 100vh; position: fixed; left: 0; top: 0; }
             platform .ship { position: fixed; width: 8rem; height:4rem; background-size: cover; background-repeat: no-repeat;  top: 0; left: 10%; }
-            .projectile { background-size: cover;  background-repeat: no-repeat;  position: fixed; }
+            .projectile { background-size: contain;  background-repeat: no-repeat;  position: fixed; }
+            .enemy { background-size: contain;  background-repeat: no-repeat;  position: fixed; }
+            damage { width: 100vw; height: 100vh; background-color: rgba(255,0,0, .3); position: fixed; top: 0; left: 0;  opacity:  0; display: block; }
         </style>
         <game>
             <background></background>
             <platform></platform>
-            <score>0</score>
+            <damage></damage>
+            <score>kills: <span>0</span></score>
         </game>
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="game.js"></script>
